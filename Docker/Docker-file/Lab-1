@@ -1,0 +1,102 @@
+Lab - create a Dockerfile for creating image for - Python flask app 
+
+git hub link - https://github.com/docker/awesome-compose/tree/master/flask
+
+Create AWS EC2 instance - ubuntu 
+install docker from the last class notes.
+mkdir my-python-app
+cd my-python-app
+create the application code
+vi app.py                                   
+from flask import Flask
+app = Flask(__name__)
+@app.route("/")
+def hello():
+      return “Hello, from the Dockerized Python App! - Dockerfile demo”
+if __name__ == "__main__":
+     app.run(host='0.0.0.0', port=5001)
+ 
+create a requirements.txt file with necessary dependencies.
+ubuntu@ip-172-31-2-103:~/my-python-app$ vi requirements.txt    
+ubuntu@ip-172-31-2-103:~/my-python-app$ cat requirements.txt 
+flask
+ 
+create a Dockerfile - to build an image 
+vi Dockerfile       
+
+base image with python - FROM
+set working directory - WORKDIR
+copy requirements & install dependencies
+
+copy requirement.txt   - COPY
+run requirements.txt in the container. - RUN
+copy all files from current dir of host machine to current dir(working dir) of container application code COPY .  . (. → source , . → container)
+expose the app port - EXPOSE
+start the flask app - CMD:
+
+
+
+ubuntu@ip-172-31-2-103:~/my-python-app$ cat Dockerfile 
+FROM python:3.10-slim
+WORKDIR /app
+COPY requirements.txt  .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY .  .
+EXPOSE 5001
+CMD ["python","app.py"]
+each instruction in the dockerfile is called as Layer. All together are called Layers of an image.
+ 
+$ sudo usermod -aG docker ubuntu
+
+Open NEW session
+ 
+Building an image using dockerfile.
+$ docker build -t my-docker-demo-python:1.0  . 
+
+-t    → tag
+my-docker-demo-python    →     image name
+1.0    →     version
+.     →     path of the dockerfile location  - dot is given becoz dockerfile is in current dir 
+ 
+$ docker images 
+
+ubuntu@ip-172-31-2-103:~/my-python-app$ docker images
+REPOSITORY              TAG       IMAGE ID       CREATED         SIZE
+my-docker-demo-python   1.0       229b25f62fde   2 minutes ago   138MB
+hello-world             latest    74cc54e27dc4   5 months ago    10.1kB
+Inspect the docker image to find which port number the image is using.
+
+ubuntu@ip-172-31-2-103:~/my-python-app$ docker inspect my-docker-demo-python:1.0
+outputs the details of the image. you'll find the exposed port info 
+ 
+Run the Docker container from the image.
+
+ubuntu@ip-172-31-2-103:~/my-python-app$ docker run -it --name my-python-app -p 5002:5001 my-docker-demo-python:1.0 /bin/bash
+root@7beba2bd1947:/app# 
+
+--it     →    interactive mode
+-name        →        gives name for container
+- p      →       maps port 5002 (port nbr of ec2) to : 5001(port nbr of container) 
+ec2 has a port nbr and inside that many containers can be ran, and each container has a specific port nbr for us to connect to it.
+my-docker-demo-python    → is the image name 
+1.0       →      version
+/bin/bash         →      lang to be used inside the container.
+ 
+docker ps > check if docker container is running.
+ 
+update All TCP in SG.
+ 
+To verify if the copy paste the public ip of the EC2 in web browser along with the port number of host machine.
+http:<public-ip-address>:5002
+
+if you face any error update the name(my-python-app1) and port number (to 5003) of the previous run command and run in detach mode by using -d at the before --name in the command.
+ 
+ubuntu@ip-172-31-2-103:~/my-python-app$ docker run -d --name my-python-app1 -p 5003:5001 my-docker-demo-python:1.0
+4503f6334ada5c070eaf7a2ee4606f7680cf81c52e8e10d90dd4f33e297921f8
+ubuntu@ip-172-31-2-103:~/my-python-app$ docker ps
+CONTAINER ID   IMAGE                       COMMAND           CREATED         STATUS         PORTS                                         NAMES
+4503f6334ada   my-docker-demo-python:1.0   "python app.py"   6 seconds ago   Up 6 seconds   0.0.0.0:5002->5001/tcp, [::]:5002->5001/tcp   my-python-app1
+ubuntu@ip-172-31-2-103:~/my-python-app$ 
+ 
+To verify if the copy paste the public ip of the EC2 in web browser along with the port number of host machine.
+http:<public-ip-address>:5003
