@@ -1,4 +1,6 @@
-# installation 
+# Docker Commands 
+
+## Installation 
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose docker-compose-plugin
 
@@ -14,13 +16,14 @@ docker ps
 
 docker ps -a
 
-# pulling image from registry
+# Pulling image from registry
 
 docker pull image:tag 
 
-# pushing image to registry
+# Pushing image to registry
 
 docker push localimage:tag useracct-name/<image-name>:tag 
+
 # Run a container from image 
 
 docker run -it --name container-name -p hostport:containerport image:tag /bin/bash
@@ -41,7 +44,7 @@ docker inspect <image-name>:tag
 
 docker stop <conatiner-id>
 
-# start a Conatiner 
+# Start a Conatiner 
 
 docker start <container-id>
 
