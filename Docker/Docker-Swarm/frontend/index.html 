@@ -1,0 +1,9 @@
+<html>
+<head>
+       <title> Page</title>
+</head>
+<body>
+       <h1> Hello from Frontend!</h1>
+       <p> Backend is at : <a href-"http://backend:5000">backend</a><p>
+</body>
+</html>
