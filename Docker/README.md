@@ -140,6 +140,26 @@ docker network disconnect <net-name> <cont-name>
 
 docker newtork rm <net-name>
 
+## To deploy & run an Application Stack 
+
+docker stack deploy -c <docker-composefile> <app-stack-name>
+
+## To view docker stack applications running.
+
+docker stack ls 
+
+## To view services running using docker stack 
+
+docker service ls
+
+## To view container-node info of a running application.
+
+docker stack ps <app-stack-name>
+
+## To delete app stack & services 
+
+ docker stack rm <app-stack-name>
+
 
 
 
