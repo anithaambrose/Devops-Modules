@@ -140,6 +140,24 @@ docker network disconnect <net-name> <cont-name>
 
 docker newtork rm <net-name>
 
+## Docker - Orchestration  - Docker SWARM
+
+### Initialize  docker swarm  - node as manager/ Master
+
+docker swarm init --advertise-addr <ip_address>
+
+### add nodes to docker swarm using generated Token to addd nodes as worker node to master node 
+
+docker swarm join --token <token> <ipaddress>:2377
+
+### View Docker Information 
+
+docker info
+
+### To View all Nodes.
+
+docker node ls
+
 ## To deploy & run an Application Stack 
 
 docker stack deploy -c <docker-composefile> <app-stack-name>
@@ -159,8 +177,3 @@ docker stack ps <app-stack-name>
 ## To delete app stack & services 
 
  docker stack rm <app-stack-name>
-
-
-
-
-
