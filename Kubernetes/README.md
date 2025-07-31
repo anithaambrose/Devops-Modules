@@ -44,13 +44,13 @@ eksctl version   ->   0.211.0
 
 ## Creation of Cluster in EKS via eksctl
 
-" eksctl create cluster \
+  eksctl create cluster "\"
 --name cluster-name \
 --region ap-south-1 \
 --nodegroup-name Node-grp-name \
 --node-type t3.medium \
 --nodes 2 \
---managed "
+--managed 
 
 ## To update kubeconfig 
 
