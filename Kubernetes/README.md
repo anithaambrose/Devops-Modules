@@ -1,9 +1,11 @@
-# Kubernetes Architecture:
+# Kubernetes
 
+## K8s Architecture:
 <img width="1024" height="648" alt="image" src="https://github.com/user-attachments/assets/8c47615e-aa5c-433f-8d42-172af25e47cb" />
+
 <img width="1402" height="882" alt="image" src="https://github.com/user-attachments/assets/8cc15e1a-ed37-4b0d-90cd-ed5cfb14cea5" />
 
-####  Cluster consists of  Master node and the worker node 
+####  Cluster consists of  Master node (Control Plane) and the worker node (Data Plane)
 
 #### Worker nodes are actually running the application workloads 
  
