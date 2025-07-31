@@ -8,22 +8,30 @@
 #### Worker nodes are actually running the application workloads 
  
 ∙ Pod is the smallest unit responsible to run the application container 
+
 ∙ Kubelet an agent runs on all the worker nodes and also responsible to create pods
+
 ∙ Container runtime interface  - Docker 
+
 ∙ Kube-proxy for networking and for exposing our application 
  
 #### Master node is responsible for handling workloads inside the cluster 
-∙ Kube-api-serverwhich is the entry point and the authentication system for every request that you make. It also exposes a kubernetes API for the end user to start using it
-∙ Scheduler  is used to assign ports to the nodes  
-∙ Controller Manager that makes sure everything is working as you want or as you have desired in manifest files 
-∙ Etcd stores all the cluster information is stored inside  
+∙ Kube-api-serverwhich is the entry point and the authentication system for every request that you make. It also exposes a kubernetes API for the end user to start using it.
+
+∙ Scheduler  is used to assign ports to the nodes.
+
+∙ Controller Manager that makes sure everything is working as you want or as you have desired in manifest files.
+
+∙ Etcd stores all the cluster information.
 
 ## Installation of Command Line Tools 
 
 ### Install aws CLI in host ec2 server. 
 
 ∙ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+
 ∙ sudo apt install zip
+
 ∙ unzip awscliv2.zip
 ∙ sudo ./aws/install
 ∙ aws --version       ->     aws-cli/2.27.55 Python/3.13.4 Linux/6.8.0-1029-aws exe/x86_64.ubuntu.24
