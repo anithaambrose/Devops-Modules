@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: myconfig-1
+data:
+  APP_MODE: "Production"
+  LOG_LEVEL: "debug"
+  config.json:  |
+    {
+        "version": "1.0",
+        "feature": true,
+    }
+    
