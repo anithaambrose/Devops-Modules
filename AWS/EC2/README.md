@@ -98,8 +98,20 @@ High Performane Computing is designed to offer best price performance for runnin
     e – Extra storage or memory
 
     z – High performance
+    
 #### EC2 Instance Basics:
-Understanding the concept of virtual servers and instances. Key components of an EC2 instance: AMI (Amazon Machine Image), instance types, and instance states. Differentiating between On-Demand, Reserved, and Spot instances.
+Understanding the concept of virtual servers and instances.
+
+##### Key components of an EC2 instance: 
+AMI (Amazon Machine Image), instance types, and instance states. Differentiating between On-Demand, Reserved, and Spot instances.
+
+#### Pricing Models:
+1. On demand 
+2. Reserved instances
+3. Savings Plan
+4. Spot instances
+5. Dedicated instances
+6. Capacity Reservations.
 
 #### Launching an EC2 Instance:
 Step-by-step guide on launching an EC2 instance using the AWS Management Console.
@@ -110,3 +122,5 @@ Understanding security groups and key pairs for securing instances.
 Starting, stopping, and terminating instances.
 Monitoring instance performance and utilization.
 Basic troubleshooting and accessing instances using SSH (Secure Shell).
+
+
