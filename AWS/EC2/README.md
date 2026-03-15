@@ -102,8 +102,8 @@ High Performane Computing is designed to offer best price performance for runnin
 #### EC2 Instance Basics:
 Understanding the concept of virtual servers and instances.
 
-##### Key components of an EC2 instance: 
-AMI (Amazon Machine Image), instance types, and instance states. Differentiating between On-Demand, Reserved, and Spot instances.
+##### Key components of an EC2 instance creation: 
+AMI (Amazon Machine Image), instance types, Security Groups, Key pairs, EBS volumes.
 
 #### Pricing Models:
 1. On demand 
