@@ -6,7 +6,7 @@
 
 ### Bash Scripting
 
-### [AWS] (https://github.com/anithaambrose/Devops-Modules/tree/main/AWS)
+### [AWS](https://github.com/anithaambrose/Devops-Modules/tree/main/AWS)
 
 ### Docker 
 
