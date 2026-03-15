@@ -14,34 +14,43 @@ Access the on-demand infrastructure and capacity you need to run HPC application
 Access environments in minutes, dynamically scale capacity as needed, and benefit from AWS’s pay-as-you-go pricing.
 Deliver the broadest choice of compute, networking (up to 400 Gbps), and storage services purpose-built to optimize price performance for ML projects 
 
-### EC2 Instance Types
+### EC2 Instance Types - 6 types 
 
-#### General purpose
+#### 1. General purpose
 
-General Purpose instances are designed to deliver a balance of compute, memory, and network resources. They are suitable for a wide range of applications, including web servers,
-small databases, development and test environments, and more.
+General Purpose instances are designed to deliver a balance of compute, memory, and network resources. 
+Suitable for a wide range of applications, including web servers, small databases, development and test environments, and more.
+Ex: t2
 
-#### Compute optimized
+#### 2. Compute optimized
 
-Compute Optimized instances provide a higher ratio of compute power to memory. They excel in workloads that require high-performance processing such as batch processing, 
+Compute Optimized instances provide a higher ratio of compute power to memory. They excel in compute intensive workloads that require high-performance processing such as batch processing, 
 scientific modeling, gaming servers, and high-performance web servers.
+Ex: C5a
 
-#### Memory optimized
+#### 3. Memory optimized
 
 Memory Optimized instances are designed to handle memory-intensive workloads. They are suitable for applications that require large amounts of memory, such as in-memory databases,
 real-time big data analytics, and high-performance computing.
+Ex: R
 
-#### Storage optimized
+#### 4. Storage optimized
 
-Storage Optimized instances are optimized for applications that require high, sequential read and write access to large datasets. 
-They are ideal for tasks like data warehousing, log processing, and distributed file systems.
+Storage Optimized instances are designed for applications that require high, sequential read and write access to large datasets. 
+They are ideal for tasks like data warehousing, log processing, and distributed file systems. 
+Ex: I2
 
-#### Accelerated computing
+#### 5. Accelerated computing
 
 Accelerated Computing Instances typically come with one or more types of accelerators, such as Graphics Processing Units (GPUs),
 Field Programmable Gate Arrays (FPGAs), or custom Application Specific Integrated Circuits (ASICs). 
 These accelerators offload computationally intensive tasks from the main CPU, enabling faster and more efficient processing for specific workloads.
 image.
+Ex: G3
+
+#### 6. High Performane Computing
+
+High Performane Computing is designed to offer best price performance for running HPC workloads at scale on AWS.
 
 #### Instance families
 
