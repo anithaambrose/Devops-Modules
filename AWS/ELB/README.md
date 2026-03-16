@@ -36,22 +36,22 @@ ALB operates at Layer 7 (Application Layer) of the OSI model and is the best cho
 
 ### Benefits of ALB:
 
-Support for Path conditions: You can configure your listener with rules that forward requests based on the URL in the request.
+- Support for Path conditions: You can configure your listener with rules that forward requests based on the URL in the request.
 This allows you to break down your application into smaller services (microservices) and route requests to the appropriate service based on the URL’s content.
 
-Support for Host conditions: You can configure your listener with rules that forward requests based on the host field in the HTTP header. 
+- Support for Host conditions: You can configure your listener with rules that forward requests based on the host field in the HTTP header. 
 This allows you to route requests to many domains using a single load balancer.
 
 Routing is supported based on request information such as HTTP header conditions and methods, query parameters, and source IP addresses.
 You can send routing requests to numerous applications on a single EC2 server.
 An instance or IP address can be registered with numerous target groups on a separate port.
 
-`
-Works at Layer 7 (application Layer)
-supports host & path based routing 
-Ideal for HTTP/HTTPS traffic
-Use Case	Web Apps, Microservices, REST APIs
-`
+```
+- Works at Layer 7 (application Layer)
+- supports host & path based routing 
+- Ideal for HTTP/HTTPS traffic
+- Use Case	Web Apps, Microservices, REST APIs
+```
 
 ### ALB components:
 
@@ -79,12 +79,12 @@ Static IP and Elastic IP support
 Integration with Amazon Route 53
 Integration with AWS Services
 
- `
- Works at Layer 4 (Transpot layer)
- Supports Ip & Port based routing.
- Ideal for TCP/UDP traffic
- Use Case	- 	Gaming, Streaming, IoT, SaaS
- `
+ ```
+ - Works at Layer 4 (Transpot layer)
+ - Supports Ip & Port based routing.
+ - Ideal for TCP/UDP traffic
+ - Use Case	- 	Gaming, Streaming, IoT, SaaS
+ ```
 
  ## Gateway Load Balancer:
 Gateway Load Balancer helps you easily deploy, scale, and manage your third-party virtual appliances. 
