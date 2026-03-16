@@ -1,6 +1,6 @@
 # ASG - Auto Scaling Group 
 
-## ASG is a mechanism that automatically permist to up scale / down scale the resources to meed demand based on custom-defined metrics & thresholds.
+## ASG is a mechanism that automatically permist to up scale / down scale the resources to meet demand based on custom-defined metrics & thresholds.
 
 AWS EC2 ASG ensures that you have the correct number of Amazon EC2 instances available to handle the load for your application.
 
