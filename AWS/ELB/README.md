@@ -29,11 +29,10 @@ Choosing between an Application Load Balancer (ALB) and a Network Load Balancer 
 
 ## Application Load Balancer:
 
-Application Load Balancers intelligently provide scalability, performance, and availability. They also guarantee that your servers are not overworked and are prepared to handle traffic spikes.
-
-ALB operates at Layer 7 (Application Layer) and is the best choice for modern, content-aware web applications, APIs, and microservices.
-
 The Application Load Balancer distributes incoming HTTP and HTTPS traffic across multiple targets based on URL path (/api, /blog), hostnames, HTTP headers, or query strings.
+It intelligently provide scalability, performance, and availability & also guarantees that your servers are not overworked and are prepared to handle traffic spikes.
+
+ALB operates at Layer 7 (Application Layer) of the OSI model and is the best choice for modern, content-aware web applications, APIs, and microservices.
 
 ### Benefits of ALB:
 
@@ -48,7 +47,10 @@ You can send routing requests to numerous applications on a single EC2 server.
 An instance or IP address can be registered with numerous target groups on a separate port.
 
 `
-Use Case	Web Apps, Microservices, REST APIs	
+Works at Layer 7 (application Layer)
+supports host & path based routing 
+Ideal for HTTP/HTTPS traffic
+Use Case	Web Apps, Microservices, REST APIs
 `
 
 ### ALB components:
@@ -63,9 +65,8 @@ Use Case	Web Apps, Microservices, REST APIs
 
 ## Network Load Balancer:
 
-Network Load Balancer operates at the connection level (Layer 4), designed to handle millions of requests per second with ultra-low latency.
-Routes connections to targets (Amazon EC2 instances, microservices, and containers) within Amazon VPC, based on IP protocol data.
-
+Network Load Balancer designed to handle millions of requests per second with ultra-low latency , operates at the connection level (Layer 4).
+NLB Routes connection requests to targets (Amazon EC2 instances, microservices, and containers) within Amazon VPC, based on IP protocol data.
 Ideal for load balancing of both TCP and UDP traffic,
 Network Load Balancer is optimized to handle sudden and volatile traffic patterns while using a single static IP address per Availability Zone.
 It is integrated with other popular AWS services such as Auto Scaling, Amazon EC2 Container Service (ECS), Amazon CloudFormation, and AWS Certificate Manager (ACM).
@@ -79,6 +80,9 @@ Integration with Amazon Route 53
 Integration with AWS Services
 
  `
+ Works at Layer 4 (Transpot layer)
+ Supports Ip & Port based routing.
+ Ideal for TCP/UDP traffic
  Use Case	- 	Gaming, Streaming, IoT, SaaS
  `
 
