@@ -2,12 +2,14 @@
 1.	create a normal ubuntu EC2 instance 
 2.	connect in instance in AWS console/ putty.
 3.	run the package update command - sudo apt update 
-4.	install apache2 application by the following commands 
+4.	install apache2 application by the following commands
+   ```
     •	confirm if in ubuntu user 
     •	$sudo apt install apache2
     •	$sudo systemctl status apache2  - if active , runs the public ip address in browser to validate 
     •	sudo systemctl stop apache2 - reload browser to verify
-    •	sudo systemctl start apache2 - refresh browser to confirm apache2 service running 
+    •	sudo systemctl start apache2 - refresh browser to confirm apache2 service running
+   ```
 5.Go to console, select instance and click actions - image & templates - create image - Give an AMI name, unselect reboot option, - click on create image .
 Now AMI is created , Give it a Name in the dashboard page, wait until its status changes from pending to available.
 
