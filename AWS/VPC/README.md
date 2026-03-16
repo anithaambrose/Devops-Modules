@@ -56,23 +56,23 @@ IP range/subnet mask => bits-subnet mask  = bits => 2^bits = Total no of ip's in
 
 2. **Internet Gateway:**  Component that enables instances in a VPC to connect to the internet.
 
-**Subnet:** Logical network segments within your VPC ( segment of VPC's Ip range).
+3. **Subnet:** Logical network segments within your VPC ( segment of VPC's Ip range).
 They enable you to subdivide your VPC network into smaller networks inside a single Availability Zone.
 One subnet per Availability Zone because a subnet cannot span zones.
 
-3. **Public Subnet:** public subnet is associated with a route table that has a route to an internet gateway.
+4. **Public Subnet:** public subnet is associated with a route table that has a route to an internet gateway.
 
-4. **Private Subnet:** private subnet does not have an internet gateway on the route table that is associated to it. However, a NAT gateway can be a route on this route table.
+5. **Private Subnet:** private subnet does not have an internet gateway on the route table that is associated to it. However, a NAT gateway can be a route on this route table.
 
-5. **Routing Table:** Rules to control how a network traffic is drected (route+ traffic info) within a VPC.
+6. **Routing Table:** Rules to control how a network traffic is drected (route+ traffic info) within a VPC.
 
 
-6. **Security Group:** Firewall for instances 
+7. **Security Group:** Firewall for instances 
 SG are Statefull - Stateful means that if requests from your instance are sent, the response traffic is allowed to flow back regardless of the inbound rules. 
 SG rules set are based on allow condition only with respective to Protocal, Port, IP range,  Internet Control Message Protocol (ICMP) type, and source or destination.
 SG are associated with instances 
 
-7. **NACL - Network Access Control List:** Firewall for Subnets , 
+8. **NACL - Network Access Control List:** Firewall for Subnets , 
 Stateless - 
 Stateless means you seperately have to allow both request and response.
 Network ACLs have separate inbound and outbound rules - Supports allow and deny rules.
@@ -87,12 +87,12 @@ Network ACLs have separate inbound and outbound rules - Supports allow and deny 
 |        Evaluates all rules                   |      Process rules in order                  |
 | Applies to an instance only if associated    |   Automatically applies to all instances in  |
 
-8. **Primary network interface (elastic network interface):**
+9. **Primary network interface (elastic network interface):**
 An elastic network interface is a virtual network interface (NIC) that connects an instance to a network.
 Each instance in a VPC has a default network interface, the primary network interface, which cannot be detached from the instance.
 
 
-9. **NAT Gateway:** Network Address Translation. 
+10. **NAT Gateway:** Network Address Translation. 
 Allows access to private subnet instances to connect outside the VPC to the internet via Elastic IP address.
 NAT gateway is assigned an Elastic IP address, which is a public IP address and is located in the public subnet.
 
