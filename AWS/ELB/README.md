@@ -2,7 +2,7 @@
 
 ### Load Balancer is used to control & distribute incoming traffic for efficient use of resources.
 
-## ELB - Elastic Load Balancer is a web service provided by AWS by which incoming traffic is efficiently & automatically distributes  across multiple targets and virtual appliances in one or more Availability Zones (AZs).
+## ELB - Elastic Load Balancer is a web service provided by AWS by which incoming traffic is efficiently & automatically distributed across multiple targets and virtual appliances in one or more Availability Zones (AZs).
 
 ### Benefits:
 
