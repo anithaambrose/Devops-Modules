@@ -50,12 +50,13 @@ An instance or IP address can be registered with numerous target groups on a sep
 `
 Use Case	Web Apps, Microservices, REST APIs	
 `
-ALB components:
+
+### ALB components:
 
 1. listener :  checks for connection requests from clients, using the protocol and port that you configure.
-2. Rules that you define for a listener determine how the load balancer routes requests to its registered targets. Each rule consists of a priority, one or more actions, and one or more conditions. When the conditions for a rule are met, then its actions are performed. You must define a default rule for each listener, and you can optionally define additional rules.
-
-3. Target group : TG routes requests to one or more registered targets, such as EC2 instances, using the protocol and port number that you specify.
+2. Rules that you define for a listener determine how the load balancer routes requests to its registered targets. Each rule consists of a priority, one or more actions, and one or more conditions.
+   When the conditions for a rule are met, then its actions are performed. You must define a default rule for each listener, and you can optionally define additional rules.
+4. Target group : TG routes requests to one or more registered targets, such as EC2 instances, using the protocol and port number that you specify.
     You can register a target with multiple target groups. You can configure health checks on a per target group basis. Health checks are performed on all targets registered to a target group that is specified in a listener rule for your load balancer.
 
 [ALB architecture](https://docs.aws.amazon.com/images/elasticloadbalancing/latest/application/images/component_architecture.png)
