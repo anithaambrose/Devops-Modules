@@ -46,7 +46,9 @@ Now AMI is created , Give it a Name in the dashboard page, wait until its status
       •	systemctl start apache2
       •	systemctl enable apache2
       •	#optional create simple index page
-      •	echo"<h1> Hello FRom EC2 with Apache2 on ubuntu!</h1>" > /var/www/html/index.html
+      ```
+      echo"<h1> Hello FRom EC2 with Apache2 on ubuntu!</h1>" > /var/www/html/index.html
+      ```
 3. Click on Launch instance & connect to it , check if ur in ubuntu user
    $ systemctl status apache2   ; $ uptime
 4. copy public IP and run it in thw browsere and verify if ubuntu has installed ,
@@ -67,9 +69,9 @@ Option -1 Using the bundle (recommended latest Version)
 8.	$ aws ec2 describe-regions  → displays regions & configs
 9.	$ aws help
 10.	$ aws ec2 describe-instances  → displays ec2 instance & its configs
+
     
-================================================================
-HW task - 1 
+# HW task - 1 
 1.	create an instance
 2.	EC2 - windows , allow http, https, ssh.
 3.	Connect with RDP, open CMD in windows 
