@@ -28,12 +28,15 @@ CICD - Collection of IP address that share the same network.
 IANA - assigns large CIDR to regional network and regional network assigns smaller block to local internet registries.
 
 ### IP Range Calc:
-
+```
 IP range/subnet mask => bits-subnet mask  = bits => 2^bits = Total no of ip's in range.
+```
+```
 10.10.1.0/30 => 32-30 = 2 => 2^2 = 4
 10.10.1.0/24 => 32-24 = 8 => 2^8 = 256
 10.10.1.0/16 => 32-16 = 16 => 2^16 = 65536
 10.10.1.0/8 => 32-8 = 24 => 2^24 = 16777216
+```
 
 
 #### AWS reserves the first four IP addresses and the last IP address of every subnet for internal purposes.
