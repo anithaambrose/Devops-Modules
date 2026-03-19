@@ -1,9 +1,9 @@
 # EBS - Amazon Elastic Block Storage
 
 ## Amazon Elastic Block Store (Amazon EBS) provides block level storage volumes for use with EC2 instances.
-`
-EBS volumes behave like **raw, unformatted block devices** used for data that must be **quickly accessible and requires long-term persistence**.
-`
+
+## EBS volumes behave like **raw, unformatted block devices** used for data that must be **quickly accessible and requires long-term persistence**.
+
 ### Amazon EBS volumes Characteristics:
 
   * Block-level storage device that you can attach to your instances like a physical hard drive
