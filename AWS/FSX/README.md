@@ -1,6 +1,10 @@
 # FSX - Amazon File System X
 
-## Fully managed servie provided by AWS that makes it easy to launch & run rich high performance third-party file systems (NetApp ONTAP, OpenZFS, Windows File Server, and Lustre).
+## Fully managed servie provided by AWS that makes it easy to launch & run rich high performance third-party file systems, 
+          * NetApp ONTAP
+          * OpenZFS
+          * Windows File Server
+          * Lustre
 
 <h4> It automates infrastructure tasks like provisioning, backups, and patching, offering shared storage for enterprise applications, machine learning, and high-performance computing (HPC) workloads </h4> 
 
