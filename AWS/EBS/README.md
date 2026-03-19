@@ -34,10 +34,15 @@
 ```
 # Snapshots: 
 
-Amazon EBS provides the ability to *create snapshots (backups) of any EBS volume and **write a copy** of the data in the volume to **Amazon S3***, where it is **stored redundantly in multiple Availability Zones**.
+Amazon EBS provides the ability to *create snapshots (backups) of any EBS volume and **write a copy** of the data in the volume to **Amazon S3***, where it is **stored redundantly in multiple  Availability Zones**.
+
 The volume *does not need to be attached to a running instance* in order to take a snapshot.
+
 As we continue to write data to a volume, we can *periodically* create a snapshot of the volume to use as a baseline for new volumes.
+  
 These snapshots can be *used to create multiple new EBS volumes or move volumes across Availability Zones*.
+
 Snapshots of *encrypted EBS volumes* are *automatically encrypted*.
+
 Snapshots are *incremental backups*, meaning that only the blocks on the *volume that have changed after your most recent snapshot are saved*.
 
