@@ -6,6 +6,8 @@ RDBMS - (MySQL, PostgreSQL, Oracle, SQL Server, MariaDB, and Aurora).
 
 It **automates** time-consuming tasks like backups, patching, and infrastructure provisioning, making database administration highly efficient.
 
+Port No for RDS - **3306**
+
 ### Key Features
 * Automated Management: Handles patching, backups, and failover.
 * Scalability: Single API call or console click to scale compute/storage.
