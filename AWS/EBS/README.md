@@ -24,14 +24,14 @@ EBS volumes behave like **raw, unformatted block devices** used for data that mu
    * **Cold** HDD (sc1): *Lowest cost storage* for *less frequently* accessed data or archival workloads.
      
 ### Benefits of using EBS volumes:
-`
+```
 1.Data availability
 2.Data persistence
 3.Data encryption
 4.Data security
 5.Snapshots
 6.Flexibility
-`
+```
 # Snapshots: 
 
 Amazon EBS provides the ability to *create snapshots (backups) of any EBS volume and **write a copy** of the data in the volume to **Amazon S3***, where it is **stored redundantly in multiple Availability Zones**.
