@@ -18,7 +18,7 @@ Port No for RDS - **3306**
 
 1. Amazon Aurora (MySQL/PostgreSQL) :   Offers *higher performance and availability* than standard MySQL/PostgreSQL.
    
-2. MySQL:            *Popular open-source database* frequently used for web applications, content management systems, and simple transactional operations.
+2. MySQL:            *Popular open-source database* frequently used for web applications, content management systems, mobile apps and simple transactional operations.
 
 3. PostgreSQL:       *Advanced open-source object-relational DBMS* known for **complex** data handling, JSON support, and extensibility.
 
@@ -37,10 +37,3 @@ Port No for RDS - **3306**
 * Burstable Performance (e.g., db.t3, db.t4g): Cost-effective for low-utilization scenarios. 
 
 
-### Use Cases:
-
-1. Production Web Applications: Hosting back-end databases for **e-commerce, content management systems, or mobile apps** using **Aurora, MySQL, or PostgreSQL** .
-3. Development & Testing: *Quickly* creating or restoring database instances for development, testing, and staging environments, often utilizing the "dev/test" template and Free Tier.
-4. High-Volume Transaction Processing: Leveraging **Provisioned IOPS storage for I/O-intensive workloads**.
-5. Data Analytics/Reporting: Uses Read Replicas to increase read throughput and offload traffic from the primary database.
-6. Secure & Compliant Databases
