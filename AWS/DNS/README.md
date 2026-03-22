@@ -6,9 +6,10 @@
 
  DNS is a **resolver** 
 
- # Route 53 
+ # AWS Route53 
 
 **Highly available and scalable** domain name system (DNS) web service that performs **3** main functions.
+  
     * Domain Registration.
     * DNS Routing.
     * Health Checking.
@@ -23,15 +24,17 @@
      * DNS failover - If failover happens , we can create a backup plan by configuring in route53 by setup fallback for applications.
    
 4. **Global DNS Resolver**
-       Uses worldwide network & many DNS servers that are placed together, users can immediately access the website with low latency & high perfomance.
+      Uses worldwide network & many DNS servers that are placed together, users can immediately access the website with low latency & high perfomance.
 
 ### Benefits of Route53:    
+  
   * Flexible
   * Cost effective
   * Hisghly available & reliable
   * scalable
 
 ### Concepts of Route53:
+
 1. Domain Registration - domain name , registar, registry, reseller, Top-level domain (TLD)
 2. Domain Name system - DNS query, CIDR block, DNS resolver, DNS, hosted Zone, name servers, Private DNS, record , routing policy, subdomain, Time to live (TTL)
 3. Routing Policy
