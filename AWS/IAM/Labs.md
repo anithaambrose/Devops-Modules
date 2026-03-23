@@ -43,11 +43,17 @@ Now AMI is created , Give it a Name in the dashboard page, wait until its status
 2.	Under Advanced details → place the following commands so it runs while launching the instance itself, reducing the manual efforts in execution of commands/ installing applications when trying to create multiple instances.
    
       •	apt update -y
+  	
       •	#install aApche2 (hhtpd for ubuntu)
+
       •	apt install apache2 -y
+  	
       •	#start the Service
+  	
       •	systemctl start apache2
+  	
       •	systemctl enable apache2
+  	
       •	#optional create simple index page
   	
       ```
