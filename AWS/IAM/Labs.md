@@ -84,6 +84,21 @@ Option -1 Using the bundle (recommended latest Version)
 9.	$ aws help
 10.	$ aws ec2 describe-instances  → displays ec2 instance & its configs
 
+aws ec2 describe-instances \
+  --query "Reservations[*].Instances[*].[InstanceId,PublicIpAddress]" \
+  --output table
+-------------------------------------------
+|            DescribeInstances            |
++----------------------+------------------+
+|  i-0b4e774d34ea3ecd2 |  13.233.163.62   |
+|  i-0016cb73d5c76b8a7 |  13.232.127.122  |
++----------------------+------------------+
+
+aws ec2 describe-instances --query "Reservations[*].Instances[*].BlockDeviceMappings[*].Ebs.VolumeId" --output text
+
+vol-0e669cb0de344e8dc
+vol-09ae0c3273da440bc
+
     
 # HW task - 1 
 1.	create an instance
@@ -92,5 +107,21 @@ Option -1 Using the bundle (recommended latest Version)
 4.	share the system info.
    
 Note: for windows you can use RDP in PC , give the public IP & give key (.pem/.ppk)& connect with username 
-1.	RDP works on 4 digit port No → find it 
+1.	RDP works on 4 digit port No → 3389
 2.	Find out if .pem/.ppk should be used or password can be used to connect .
+
+Steps : 
+
+1. launch windows instance
+
+2. Add the inbound rule to SG with RDP port - 3389
+
+3. go back to EC2 instance , click on connect, under RDP tab - upload the pem keyfile aand decrypt the password.
+
+4. Go to Windows app in mac or rdp in windows , click on + to add PC.
+
+5. enter ip address , under credentials choose add credentials - username - administrator & decrypted password & save.
+
+6. ouble click on the device to start the Windows PC..
+
+ 
