@@ -6,17 +6,15 @@
 
 ### Benefits:
 
-1. Security
-Secure your applications with SSL/TLS termination, integrated certificate management, and client certificate authentication.
+1. Security - Secure your applications with SSL/TLS termination, integrated certificate management, and client certificate authentication.
 
-2. Automatic scaling
-Deliver applications with high availability and automatic scaling.
+2. Automatic scaling - Deliver applications with high availability and automatic scaling.
 
-3. Monitor in real time
-Monitor the health and performance of your applications in real time, uncover bottlenecks, and maintain SLA compliance.
+3. Monitor in real time - Monitor the health and performance of your applications in real time, uncover bottlenecks, and maintain SLA compliance.
 
 
 ## Types of ELB:
+
 1. Application Load Balancer
 2. Network Load Balancer
 3. Gateway Load Balancer
@@ -30,20 +28,23 @@ Choosing between an Application Load Balancer (ALB) and a Network Load Balancer 
 ## Application Load Balancer:
 
 The Application Load Balancer distributes incoming HTTP and HTTPS traffic across multiple targets based on URL path (/api, /blog), hostnames, HTTP headers, or query strings.
+
 It intelligently provide scalability, performance, and availability & also guarantees that your servers are not overworked and are prepared to handle traffic spikes.
 
 ALB operates at Layer 7 (Application Layer) of the OSI model and is the best choice for modern, content-aware web applications, APIs, and microservices.
 
 ### Benefits of ALB:
 
-- Support for Path conditions: You can configure your listener with rules that forward requests based on the URL in the request.
+- Support for **Path** conditions: You can configure your listener with rules that **orward requests based on the URL** in the request.
 This allows you to break down your application into smaller services (microservices) and route requests to the appropriate service based on the URL’s content.
 
-- Support for Host conditions: You can configure your listener with rules that forward requests based on the host field in the HTTP header. 
+- Support for **Host** conditions: You can configure your listener with rules that **forward requests based on the host field in the HTTP header**. 
 This allows you to route requests to many domains using a single load balancer.
 
 Routing is supported based on request information such as HTTP header conditions and methods, query parameters, and source IP addresses.
+
 You can send routing requests to numerous applications on a single EC2 server.
+
 An instance or IP address can be registered with numerous target groups on a separate port.
 
 ```
@@ -56,28 +57,34 @@ An instance or IP address can be registered with numerous target groups on a sep
 ### ALB components:
 
 1. listener :  checks for connection requests from clients, using the protocol and port that you configure.
+
 2. Rules that you define for a listener determine how the load balancer routes requests to its registered targets. Each rule consists of a priority, one or more actions, and one or more conditions.
+
    When the conditions for a rule are met, then its actions are performed. You must define a default rule for each listener, and you can optionally define additional rules.
-4. Target group : TG routes requests to one or more registered targets, such as EC2 instances, using the protocol and port number that you specify.
+3. Target group : TG routes requests to one or more registered targets, such as EC2 instances, using the protocol and port number that you specify.
     You can register a target with multiple target groups. You can configure health checks on a per target group basis. Health checks are performed on all targets registered to a target group that is specified in a listener rule for your load balancer.
 
 [ALB architecture](https://docs.aws.amazon.com/images/elasticloadbalancing/latest/application/images/component_architecture.png)
 
 ## Network Load Balancer:
 
-Network Load Balancer designed to handle millions of requests per second with ultra-low latency , operates at the connection level (Layer 4).
-NLB Routes connection requests to targets (Amazon EC2 instances, microservices, and containers) within Amazon VPC, based on IP protocol data.
-Ideal for load balancing of both TCP and UDP traffic,
-Network Load Balancer is optimized to handle sudden and volatile traffic patterns while using a single static IP address per Availability Zone.
-It is integrated with other popular AWS services such as Auto Scaling, Amazon EC2 Container Service (ECS), Amazon CloudFormation, and AWS Certificate Manager (ACM).
+* Network Load Balancer designed to handle millions of requests per second with ultra-low latency , operates at the transport layer of OSI (Layer 4).
+
+* NLB Routes connection requests to targets (Amazon EC2 instances, microservices, and containers) within Amazon VPC, based on IP protocol data.
+
+* Ideal for load balancing of both TCP and UDP traffic,
+
+* Network Load Balancer is optimized to handle sudden and volatile traffic patterns while using a single static IP address per Availability Zone.
+
+* It is integrated with other popular AWS services such as Auto Scaling, Amazon EC2 Container Service (ECS), Amazon CloudFormation, and AWS Certificate Manager (ACM).
 
 ### Features of Network Load Balancer:
 
-Connection-based Layer 4 Load Balancing
-Low Latency
-Static IP and Elastic IP support
-Integration with Amazon Route 53
-Integration with AWS Services
+* Connection-based Layer 4 Load Balancing
+* Low Latency
+* Static IP and Elastic IP support
+* Integration with Amazon Route 53
+* Integration with AWS Services
 
  ```
  - Works at Layer 4 (Transpot layer)
@@ -87,15 +94,18 @@ Integration with AWS Services
  ```
 
  ## Gateway Load Balancer:
+
 Gateway Load Balancer helps you easily deploy, scale, and manage your third-party virtual appliances. 
+
 It gives you one gateway for distributing traffic across multiple virtual appliances while scaling them up or down, based on demand. 
+
 This decreases potential points of failure in your network and increases availability.
 
 ### Benefits:
 
-Scale your virtual appliance instances automatically.
-Bring higher availability to your third-party virtual appliances.
-Monitor continuous health and performance metrics.
+* Scale your virtual appliance instances automatically.
+* Bring higher availability to your third-party virtual appliances.
+* Monitor continuous health and performance metrics.
 
 ### How Gateway Load Balancer Works:
 
