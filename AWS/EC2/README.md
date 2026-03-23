@@ -131,4 +131,23 @@ Starting, stopping, and terminating instances.
 Monitoring instance performance and utilization.
 Basic troubleshooting and accessing instances using SSH (Secure Shell).
 
+## AMI  - Amazon Machine Image:
+
+Template that contains everything needed to create an EC2 instance, i.e., OS , Softwares  libraries & custom Applications.
+
+### Types of AMI:
+1.	AWS provisioned AMI's - Free
+2.	marketplace AMI's - third party 
+3.	Custom AMI's - created by own 
+4.	Community AMI's - AWS users 
+
+### Components:
+Key Pair - For Authentication , its a the Key to open the Lock /system
+Security group acts a firewall (allows /denies traffic for port specific request)
+Inbound Rules - Request entering into the EC2 or passing through the firewall  before the EC2
+
+
+## AWS CLI:
+Tool to interact inside an instance  &  AWS services within  the AWS.
+replacing AWS console page , i.e backend of AWS console.
 
