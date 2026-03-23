@@ -7,40 +7,40 @@
 - Provide secure compute for your applications. Security is built into the foundation of Amazon EC2 with the AWS Nitro System.
 - Optimize performance and cost with flexible options like AWS Graviton-based instances, Amazon EC2 Spot instances, and AWS Savings Plans.
 
-### EC2 usecases
+## EC2 usecases
 
 Deliver secure, reliable, high-performance, and cost-effective compute infrastructure to meet demanding business needs.
 Access the on-demand infrastructure and capacity you need to run HPC applications faster and cost-effectively.
 Access environments in minutes, dynamically scale capacity as needed, and benefit from AWS’s pay-as-you-go pricing.
 Deliver the broadest choice of compute, networking (up to 400 Gbps), and storage services purpose-built to optimize price performance for ML projects 
 
-### EC2 Instance Types - 6 types 
+## EC2 Instance Types - 6 types 
 
-#### 1. General purpose
+### 1. General purpose
 
 General Purpose instances are designed to deliver a balance of compute, memory, and network resources. 
 Suitable for a wide range of applications, including web servers, small databases, development and test environments, and more.
 Ex: t2
 
-#### 2. Compute optimized
+### 2. Compute optimized
 
 Compute Optimized instances provide a higher ratio of compute power to memory. They excel in compute intensive workloads that require high-performance processing such as batch processing, 
 scientific modeling, gaming servers, and high-performance web servers.
 Ex: C5a
 
-#### 3. Memory optimized
+### 3. Memory optimized
 
 Memory Optimized instances are designed to handle memory-intensive workloads. They are suitable for applications that require large amounts of memory, such as in-memory databases,
 real-time big data analytics, and high-performance computing.
 Ex: R
 
-#### 4. Storage optimized
+### 4. Storage optimized
 
 Storage Optimized instances are designed for applications that require high, sequential read and write access to large datasets. 
 They are ideal for tasks like data warehousing, log processing, and distributed file systems. 
 Ex: I2
 
-#### 5. Accelerated computing
+### 5. Accelerated computing
 
 Accelerated Computing Instances typically come with one or more types of accelerators, such as Graphics Processing Units (GPUs),
 Field Programmable Gate Arrays (FPGAs), or custom Application Specific Integrated Circuits (ASICs). 
@@ -48,11 +48,11 @@ These accelerators offload computationally intensive tasks from the main CPU, en
 image.
 Ex: G3
 
-#### 6. High Performane Computing
+### 6. High Performane Computing
 
 High Performane Computing is designed to offer best price performance for running HPC workloads at scale on AWS.
 
-#### Instance families
+### Instance families
 
     C – Compute
 
@@ -83,7 +83,7 @@ High Performane Computing is designed to offer best price performance for runnin
     VT – Video transcoding
 
     X – Extra-large memory
-#### Additional capabilities
+### Additional capabilities
 
     a – AMD processors
 
@@ -99,26 +99,34 @@ High Performane Computing is designed to offer best price performance for runnin
 
     z – High performance
     
-#### EC2 Instance Basics:
+### EC2 Instance Basics:
 Understanding the concept of virtual servers and instances.
 
-##### Key components of an EC2 instance creation: 
+## Key components of an EC2 instance creation: 
 AMI (Amazon Machine Image), instance types, Security Groups, Key pairs, EBS volumes.
 
-#### Pricing Models:
-1. On demand 
-2. Reserved instances
-3. Savings Plan
-4. Spot instances
-5. Dedicated instances
-6. Capacity Reservations.
+### Pricing Models:
 
-#### Launching an EC2 Instance:
+1. On demand - pay per second/ min - short term workloads
+
+2. Reserved instances - commits 1 or 3 years ; big discounts (30%+)
+
+3. Savings Plan - flexible 1 to 3 years - discounts available
+
+4. Spot instances - 90% discounts , additional (fault tolerance + demand increase)
+
+5. Dedicated instances - similar to physical servers - high cost.
+   
+6. Capacity Reservations - No discount , reserved capacity such as memory/Processors/CPU.
+
+## Launching an EC2 Instance:
+
 Step-by-step guide on launching an EC2 instance using the AWS Management Console.
 Configuring instance details, such as instance type, network settings, and storage options.
 Understanding security groups and key pairs for securing instances.
 
-#### Managing EC2 Instances:
+## Managing EC2 Instances:
+
 Starting, stopping, and terminating instances.
 Monitoring instance performance and utilization.
 Basic troubleshooting and accessing instances using SSH (Secure Shell).
