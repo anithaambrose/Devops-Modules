@@ -42,17 +42,17 @@ Now AMI is created , Give it a Name in the dashboard page, wait until its status
 1.	create EC2 instances →AMI, Key pair, SG -only allow SSH traffic 
 2.	Under Advanced details → place the following commands so it runs while launching the instance itself, reducing the manual efforts in execution of commands/ installing applications when trying to create multiple instances.
    
-      •	apt update -y
+      •	sudo apt update -y
   	
       •	#install aApche2 (hhtpd for ubuntu)
 
-      •	apt install apache2 -y
+      •	sudo apt install apache2 -y
   	
       •	#start the Service
   	
-      •	systemctl start apache2
+      •	sudo systemctl start apache2
   	
-      •	systemctl enable apache2
+      •	sudo systemctl enable apache2
   	
       •	#optional create simple index page
   	
@@ -60,7 +60,11 @@ Now AMI is created , Give it a Name in the dashboard page, wait until its status
       echo"<h1> Hello FRom EC2 with Apache2 on ubuntu!</h1>" > /var/www/html/index.html
       ```
 4. Click on Launch instance & connect to it , check if ur in ubuntu user
-   $ systemctl status apache2   ; $ uptime
+  
+   $ systemctl status apache2 
+   
+   $ uptime
+
 5. copy public IP and run it in thw browsere and verify if ubuntu has installed ,
 6.	If it throws Error , edit the inbound rule by getting into the attaching SG group inbound rule section and add rule - HTTP type traffic , source- Anywhere IPV4 , save rules
 7.	Refresh the browser to validate 
