@@ -87,13 +87,15 @@ Option -1 Using the bundle (recommended latest Version)
 aws ec2 describe-instances \
   --query "Reservations[*].Instances[*].[InstanceId,PublicIpAddress]" \
   --output table
+  
+  ```
 -------------------------------------------
 |            DescribeInstances            |
 +----------------------+------------------+
 |  i-0b4e774d34ea3ecd2 |  13.233.163.62   |
 |  i-0016cb73d5c76b8a7 |  13.232.127.122  |
 +----------------------+------------------+
-
+```
 aws ec2 describe-instances --query "Reservations[*].Instances[*].BlockDeviceMappings[*].Ebs.VolumeId" --output text
 
 vol-0e669cb0de344e8dc
