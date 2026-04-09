@@ -4,8 +4,11 @@ SCM manages code, tracks the project changes, keeps account of who is working   
 
 # What is GIT?
   •	Git is a DevOps tool used for source code management.
+  
   •	It is a free and open-source distributed version control system.
+  
   •	used to tracking changes in the source code, enabling multiple developers to work together on non-linear development.
+  
   •	has code history, backup and is accessible from anywhere by anyone if shared access is given.
   
 ## VCS: Version Control system is of 2 types:
