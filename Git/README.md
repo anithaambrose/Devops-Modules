@@ -1,6 +1,6 @@
 # Source Code Management?
 
-SCM manages code, tracks the project changes, keeps account of who is working   the period and the commits the individual or the team makes on a code, makes it easy to roll back to the early versions of code.
+SCM manages code, tracks the project changes, keeps account of who is working the period and the commits the individual or the team makes on a code, makes it easy to roll back to the early versions of code.
 
 # What is GIT?
   •	Git is a DevOps tool used for source code management.
@@ -13,15 +13,18 @@ SCM manages code, tracks the project changes, keeps account of who is working   
   
 ## VCS: Version Control system is of 2 types:
 
-  1.	Centralized Version Control System (CVCS) - contains 1 repository - i.e globally remote, all users pushes code to it and commits 
+  1.	Centralized Version Control System (CVCS) - contains 1 repository - i.e globally remote, all users pushes code to it and commits
+     
     1.	dis_adv: if the central server goes down no user can access or commit their changes to code.
     2.	need to be connected always with the  Central repo over the internet to access/work/commit our work.
     	
-  2.	Distributed Version Control system (DVCS) - 
+  2.	Distributed Version Control system (DVCS)
+      
     1.	each developer has a complete copy of the project's history on their local machine
     2.	enables offline work, faster operations, and easier collaboration
 
 ## Repository: fundamental version control object.
+
 Its like a Folder where codes and files are stored.
 
 ## Why version control?
@@ -37,12 +40,15 @@ Its like a Folder where codes and files are stored.
 ## Git Terminologies:
 
   ### Repository:
+   
     fundamental version control object. Its like a Folder where codes and files are stored.
  
   ### Server:
+   
     It stores all repository(local repo is also a server but it is private server). It contains metadata also.
   
   ### Commit:
+  
     ➢ It means sending code file from staging area to local repository.
     ➢ It stores changes in local repository you will get an commit-ID.
     ➢ It’s a 40 alpha-numeric characters.
@@ -63,19 +69,30 @@ Its like a Folder where codes and files are stored.
     4.	the push code to remote repository (github)
     
 Git workflow with Github:
+
 Stages - 	Description
+
   1	      Launch linux machine 
+  
   2	      Install git
+  
   3	      Make a directory
+  
   4	      Run git init(above directory converts into .git repository(local repo)
+  
   5	      .git will divide into 3 region:
           ->workspace/working directory
           ->staging area
           ->local repo
+          
   6 	    Coding is done into workspace
+  
   7 	    Add coding file in staging area
+  
   8 	    Now commit code file from staging area to local repo branch
+  
   9 	    Push coding file to central repo(github)
+  
   10 	    Pulling code to other machine from github, you can see data in local repo/staging area/working directory.
 
 Concept & Commands:
@@ -146,6 +163,7 @@ Command-line utility that Initializes the git repository by creating a new blank
 git init
 `
 ## git Clone 
+
 Command-line utility which is used to make a local copy of a remote repository. It accesses the repository through a remote URL.
 
 ```
@@ -191,10 +209,12 @@ git rm -r test.txt
 # BRANCHING
 
   Branch = Folder
+  
     •	master branch = main branch 
     •	new branch will make a copy of the main branch , for us to work, so we dont alter the original version of the files pushed to the github.
  
   Branch Types:
+  
     1.	Main/Master - Production ready code
     2.	Develop - active development 
     3.	Feature - New Feature related codes
@@ -202,7 +222,9 @@ git rm -r test.txt
     5.	Hotfix - emergency fixes
   
   Note:
+  
     •	Master always have the deployable code.
+    
     •	Feature branch is created to make the code changes so we don't alter the original/application code.
 
 ## git branch
@@ -275,10 +297,13 @@ git rebase --skip
 ```
 
 ### Merge VS Rebase
-  1.	Merge doesn't have a linear commit history 
+
+  1.	Merge doesn't have a linear commit history
+     
   2.	Rebase rewrites the commit history in a linear fashion
 
   Branch merge:
+  
     •	You can’t merge branches of different repositories.
     •	We use pulling mechanism to merge branches.
     •	To merge branches (git merge <branchname>). Then run git log –oneline.
@@ -286,6 +311,7 @@ git rebase --skip
 ## git Cherry-pick
 
 Cherry-picking in git is a Command-line utility that lets us apply a specific commit from one branch into another branch.
+
 simply used to add a commit from one branch to another branch.
 
 `
@@ -296,6 +322,7 @@ Ex: git cherry-pick 1dsfe345
 ## git Stash
 
 Command-line utility thats helps temprarily saves files without committing so that we can Switch branches and later come back to those files.
+
 Preventing them from aborting. this applies only for modified file untracked files and not new files that are untracked.
 
 ```
@@ -371,22 +398,26 @@ git reset - - hard or --soft or - - mixed
 ```
 
 Reset Types:
+
 1.	Soft reset - undo commits keep the changes in stage area
 2.	mixed reset -  undo commits , keeps the changes in working directly
 3.	hard reset - completely deletes the commit and all the changes permanently. - Dangerous
 
 SOFT Reset:
+
 Remove last 2 commits:  >>undoes commit , but pushes those files to staged area as modified files
 `
 git reset --soft HEAD~2
 `
 
 MIXED Reset: default
+
 Removing the last 1 commit : >> undoes 1 commit & but pushes those files to working directory as  untracked files
 `
 git reset --mixed HEAD~1
 `
 HARD Reset:
+
 Removes last 1 commit permanently i.e., noting here goes to working or staging area
 `
 git reset --hard HEAD~1
@@ -395,6 +426,7 @@ git reset --hard HEAD~1
 ## LOGGING 
 
 ## git log
+
 Git log is a utility tool to review and read a history of everything that happens to a repository.
 
 ```
@@ -412,9 +444,12 @@ git diff branch1 branch2 or git diff commit1 commit2
 ```
 
 ## git reflog:
+
   Shows the actions performed in git local repo that includes 
-  •	branch switch 
-  •	commit history
+  
+      •	branch switch 
+      •	commit history
+      
   Read the history from bottom to top order.
 `
 git reflog
