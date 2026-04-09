@@ -12,6 +12,7 @@
   •	It is used to install, update , remove packages(libraries)
   
   •	It maintains a file called package.json which tracks:
+  
        *	project metadata
        *	Dependencies (libraries)  
        *	Scripts for running tasks.
