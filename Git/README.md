@@ -70,6 +70,8 @@ Its like a Folder where codes and files are stored.
     
 Git workflow with Github:
 
+![workflow](https://github.com/anithaambrose/Devops-Modules/blob/main/Git/gitimage.gif)
+
 Stages - 	Description
 
   1	      Launch linux machine 
