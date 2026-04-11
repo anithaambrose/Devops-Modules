@@ -22,6 +22,23 @@ Docker is a **open source containerization platform** , paas tool for **building
 
 Docker enables to **package applications into containers** that encapsulates **source code, libraries & dependencies** required to run the code in any environment.
 
+# Docker Vs  Virtual Machine
+
+|                         Docker                                 |                              VM                                        |
+| -------------------------------------------------------------- | ---------------------------------------------------------------------- |
+|  lightweight & easily portable as they dont have seperate OS   |             heavy/Bulky as VM has guest OS above the host OS           |
+|   containers can be ported to diff Os & started immediately    |              Vm have seperate OS so porting is difficult               |
+| security risks are high, as containers have shared host kernel |  more secure as they dont share OS, strong isloation with host kernel  |
+
+# Advantages using Docker:
+
+1. Avoid Conflicts of infrstructure level issues.
+
+2. Portable & lightweight.
+
+3. Efficient utilization of resources 
+
+
 # Docker Architecture
 
 <img width="771" height="908" alt="image" src="https://github.com/user-attachments/assets/e9fb8a54-4edd-458c-ab76-21373992f8a6" />
