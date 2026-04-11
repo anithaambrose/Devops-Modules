@@ -1,3 +1,27 @@
+# Era's Over time:
+
+**Application Era** - One Appliation per Server.
+
+**Virtualization Era** - One Server with Host OS Server runs multiple VM's , each Vm has its own OS.
+
+**Containerization Era** - One Server with Host OS  has a **container Engine** that bundles up multiple Applications with their dependencies Seperately, Together.
+
+# What is a Virtual Machine?
+
+Virtual Machine is a **virtual Environment that functions as a virtual computer system** with its own **OS, memory, storage, created on a physical hardware system** (located onpremise or off premise).
+
+# Hypervisor ?
+
+Hypervisor is a **software that partitions the host systems resources** appropriately, to launch multiple VM's on top of it.
+
+Virtualization Era lets you run multiple applications on a sungle server.
+
+# Docker 
+
+Docker is a **open source containerization platform** , paas tool for **building, deploying &  managing** containerized applications.
+
+Docker enables to **package applications into containers** that encapsulates **source code, libraries & dependencies** required to run the code in any environment.
+
 # Docker Architecture
 
 <img width="771" height="908" alt="image" src="https://github.com/user-attachments/assets/e9fb8a54-4edd-458c-ab76-21373992f8a6" />
