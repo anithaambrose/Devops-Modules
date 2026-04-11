@@ -41,7 +41,7 @@ Docker enables to **package applications into containers** that encapsulates **s
 
 # Docker Architecture
 
-<img width="771" height="908" alt="image" src="https://github.com/user-attachments/assets/e9fb8a54-4edd-458c-ab76-21373992f8a6" />
+![image](https://github.com/anithaambrose/Devops-Modules/blob/main/Docker/docker.gif)
 
 ## Docker Client:
 Docker Client helps users interact with Docker. 
