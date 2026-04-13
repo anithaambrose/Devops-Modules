@@ -150,3 +150,28 @@ Client → Nginx (Port 80) → Application Container (Port 3000)
      App 1     App 2     App 3
 ```
 
+## 🔹 Advantages of Nginx
+
+🚀 High performance and scalability
+
+🔒 Enhanced security
+
+⚖️ Built-in load balancing
+
+🔐 SSL/TLS termination
+
+🐳 Excellent integration with Docker and Kubernetes
+
+📦 Lightweight and resource-efficient
+
+## 🔹 Static vs Dynamic Content
+
+|Feature| 	Static Content| 	Dynamic Content |
+--------|----------------|---------------|
+Generated	Pre-built files| (HTML, CSS, JS)|	Generated at runtime
+Examples |	Images, CSS, JS |	PHP, Python, Java, Node.js
+Server Requirement |	Simple web server	| Web server + application runtime
+Performance	| Very fast	| Depends on backend processing
+
+
+
