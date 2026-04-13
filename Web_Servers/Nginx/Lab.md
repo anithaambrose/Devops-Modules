@@ -2,7 +2,7 @@
 
 # 🎯 Objective
 
-# Deploy a dynamic Node.js application behind Nginx using Docker Compose.
+Deploy a dynamic Node.js application behind Nginx using Docker Compose.
 
 # 🏗️ Architecture
 
