@@ -1,6 +1,6 @@
 # 🔹 Hands-On Lab: Nginx Reverse Proxy for a Dynamic Node.js Application
 
-## 🎯 Objective
+# 🎯 Objective
 
 # Deploy a dynamic Node.js application behind Nginx using Docker Compose.
 
@@ -48,7 +48,7 @@ app.listen(3000, () => {
   }
 }
 ```
-##🔹 Step 3: Create the Node.js Dockerfile
+## 🔹 Step 3: Create the Node.js Dockerfile
 
 ### 📄 app/Dockerfile
 ```
