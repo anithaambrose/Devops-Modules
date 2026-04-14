@@ -159,3 +159,5 @@ docker service ls
 docker stack ps <app-stack-name>
 
 ## To delete app stack & services 
+
+docker stack rm 
