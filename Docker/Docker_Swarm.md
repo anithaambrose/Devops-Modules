@@ -79,7 +79,7 @@ its a technique that minimizes downtime and reduces risk by running two identica
 
 •	bring down a node for maintenance without any application downtime.
 
-![image] ()
+![image](https://github.com/anithaambrose/Devops-Modules/blob/main/Docker/docker%20swarm.png)
 
 ## Terminologies:
 
