@@ -145,7 +145,7 @@ Docker networking provides complete isolation for docker containers. It means a 
 
 
 # Docker File
- 
+
 •	A Dockerfile is a text document/ script containing instructions for building a Docker image.
 
 •	The Dockerfile defines the base image, the application's source code, dependencies, and configurations needed for the service to run.
@@ -153,6 +153,8 @@ Docker networking provides complete isolation for docker containers. It means a 
 •	Create a new file named `Dockerfile` in the root directory of your microservice.
 
 •	Each instruction in the dockerfile is called as Layer. All together are called Layers of an image.
+
+![image](https://github.com/anithaambrose/Devops-Modules/blob/main/Docker/dockerfile.jpg)
 
 ## Keywords of dockerfile:
 
@@ -180,6 +182,7 @@ Docker networking provides complete isolation for docker containers. It means a 
 
 •	It automates the process of managing several Docker containers simultaneously, such as a website frontend, API, and database service.
 
+![image](https://github.com/anithaambrose/Devops-Modules/blob/main/Docker/dockercompose.jpg)
 
 ## Docker image optimization :
 
