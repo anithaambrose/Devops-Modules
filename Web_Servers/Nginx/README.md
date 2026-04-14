@@ -164,6 +164,24 @@ Client → Nginx (Port 80) → Application Container (Port 3000)
 
 📦 Lightweight and resource-efficient
 
+## How does nginx handles Dynamic Content
+
+Nginx is widely considered the best front-end web server for dynamic content when paired with an appropriate application server.
+
+Nginx does not process dynamic code directly. Instead, it forwards requests to backend services such as:
+
+    PHP-FPM for PHP
+    
+    Gunicorn/uWSGI for Python
+    
+    Node.js runtime
+    
+    Tomcat for Java applications
+
+## 🏆 Typical Architecture
+
+Client → Nginx → Application Server → Database
+
 ## 🔹 Static vs Dynamic Content
 
 |Feature| 	Static Content| 	Dynamic Content |
