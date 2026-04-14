@@ -154,8 +154,10 @@ Docker networking provides complete isolation for docker containers. It means a 
 
 •	Each instruction in the dockerfile is called as Layer. All together are called Layers of an image.
 
-## Keywords of dockerfile -  Instruction	Description	Example
+## Keywords of dockerfile:
 
+| Instruction | 	Description	| Example|
+|--------------|--------------|--------|
 |FROM	|Create a new build stage from a base image.	| FROM python:3.10-slim|
 |COPY |	Copy files and directories from host machine (ec2)to container.|	COPY requirements.txt   .|
 |     |           |COPY .  .|
@@ -167,7 +169,7 @@ Docker networking provides complete isolation for docker containers. It means a 
 |EXPOSE	| Describe which ports your application is Listening on.|	EXPOSE 5001|
 |CMD	| Specify default commands.	| CMD ["python","app.py"]|
 |USER |	Set user and group ID.	|   | 
-|VOLUME	|Create Volume mounts.	 |  |
+|VOLUME	|Create Volume mounts.	 |     |
 
 
 # Docker Compose:
@@ -200,6 +202,7 @@ Reducing the size of the docker image by choosing the small size base image will
 # Docker Volumes:
 
 Docker is an ephemeral container. - meaning 
+
 ```
    •	It is short lived.
    
@@ -209,6 +212,7 @@ Docker is an ephemeral container. - meaning
    
    •	No Persistence. - means no storage.
   ``` 
+
 •	In order to store the data we need a mount a volume in the host machine & attached  it to Docker container to store - Application logs , user informations, etc
 
 •	These Volume will be present even when the container is Stopped.& it resides on the host machine.
@@ -217,31 +221,16 @@ Docker is an ephemeral container. - meaning
 
 •	This helps During Container Failure as these volume hold logs and user actions to inspect & troubleshoot.
 
-## Interview Question -What's the  Need for Docker Volume ?
+## Interview Question - What's the  Need for Docker Volume ?
 
 A volume is a docker's way to store persistent data outside the container. So that data survives even container restarts or stops.
 
-# Docker Networks:
- 
-  •	Host machine runs on a ethernet  that the user can access it using public ip address
-  
-  •	Container also runs on a ethernet group of the host machine.
-  
-  •	Host machine & container communication is possible because of the port mapping 5003:5001 
-  
-  •	This way the user can access the host machine & containers(running applications).
 
-## Is Communication between containers is possible or not and how ?
- 
- The Docker network is a virtual network created by Docker to enable communication between Docker containers.
- 
- If two containers are running on the same host they can communicate with each other without the need for ports to be exposed to the host machine.
+# Docker Networks:
+
+A virtual network created and managed by docker to enable communication between containers, host machine and any external.
 
 Docker as default has a **bridge network**
-
-## What is docker network ?
-
-Its a virtual network created and managed by docker to enable communication between containers, host machine and any external.
 
 ## Types of N/w:
   
