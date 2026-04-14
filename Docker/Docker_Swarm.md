@@ -47,9 +47,9 @@ its a technique that minimizes downtime and reduces risk by running two identica
 |   Blue Env|Green Env (backup)|
 |-----------|---------------|
 |initially  version 9.0 | 	initial version 9.0 |
-| before updating LB will be pointing to Green Env only |
+| *before updating LB will be pointing to Green Env only*|
 | during update to version 9.1	| acts a standby server that handles traffic |
-| LB will now point to Blue env as well , but initially with few user  only& then lets in more users over time.| 
+| *LB will now point to Blue env as well , but initially with few user  only& then lets in more users over time*| 
 | after update with version 9.1 | 	becomes backup|
 
  
@@ -110,9 +110,9 @@ Helps in load balancing (only routes the healthy containers)
 To ensure services are up and running as expected.
 
 ### health check cmd :
-
+`
 HEALTHCHECK  [OPTIONS]  CMD command
-
+`
 ## Docker Ecosystem:
  
  Core components
