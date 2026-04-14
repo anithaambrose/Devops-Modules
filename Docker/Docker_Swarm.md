@@ -44,7 +44,8 @@ we need a tool that can bring up the stopped containers or to spin up new ones's
 
 its a technique that minimizes downtime and reduces risk by running two identical production environments: a "blue" environment (current live version) and a "green" environment (new version).
 
-|------------------Blue Env-------------|----------------Green Env (backup)----------|
+|   Blue Env|Green Env (backup)|
+|-----------|---------------|
 |initially  version 9.0 | 	initial version 9.0 |
 | before updating LB will be pointing to Green Env only |
 | during update to version 9.1	| acts a standby server that handles traffic |
