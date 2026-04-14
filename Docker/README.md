@@ -89,22 +89,41 @@ Docker enables to **package applications into containers** that encapsulates **s
 ![image](https://github.com/anithaambrose/Devops-Modules/blob/main/Docker/docker.gif)
 
 ## Docker Client:
+
 Docker Client helps users interact with Docker. 
+
 The most common client is the Docker Command Line Interface (CLI), which sends commands to the Docker Daemon via a REST API, typically over UNIX sockets or a network interface.
 
 ## Docker Daemon (dockerd):
+
 Docker Daemon  is the core component that runs on the Docker Host. 
+
 It listens for Docker API requests and manages Docker objects such as images, containers, networks, and volumes.
+
 The daemon handles the lifecycle of containers, including building images, running instances, and managing resources. 
 
 ## Docker Host:
+
 Docker Host is the environment where the Docker Daemon runs, providing the necessary infrastructure to execute and manage Docker applications.
+
 It encompasses the Docker Daemon, along with the storage for images, running containers, and configured networks and volumes.
 
 ## Docker Registry:
+
 Docker Registry is a centralized repository for storing Docker images.
+
 Docker Hub is the most widely used public registry, where users can find and share pre-built images.
+
 Users can also set up private registries for their own image management.
+
+•	Public - accessed by anyone (pulls & stores images) ex : Dockerhub 
+
+ Dockerhub: https://app.docker.com/
+
+•	Private - Limited Access ( only for granted privileges) ex: dockerhub pv-1 - paid version, jfrog 
+
+   •	AWS  - ECR - Elastic Container Registry.
+   •	Azure - Azure Container Registry 
 
 ## Docker Objects:
 
@@ -125,4 +144,112 @@ We can store data within the writable layer of the container but it requires a s
 Docker networking provides complete isolation for docker containers. It means a user can link a docker container to many networks. It requires very less OS instances to run the workload.
 
 
- docker stack rm <app-stack-name>
+# Docker File
+ 
+•	A Dockerfile is a text document/ script containing instructions for building a Docker image.
+•	The Dockerfile defines the base image, the application's source code, dependencies, and configurations needed for the service to run.
+•	Create a new file named `Dockerfile` in the root directory of your microservice.
+•	Each instruction in the dockerfile is called as Layer. All together are called Layers of an image.
+
+## Keywords of dockerfile -  Instruction	Description	Example
+|---------------------|----------------------------|----------------------|
+|FROM	|Create a new build stage from a base image.	| FROM python:3.10-slim|
+|COPY |	Copy files and directories from host machine (ec2)to container.|	COPY requirements.txt   .
+|COPY .  .|
+|ADD	|Similar to copy, but has adv features like - fetching files from an url.	 |  |
+|RUN	|Executes cmds inside the container.	|RUN pip install --no-cache-dir -r requirements.txt|
+|ENV	|Sets environment variables in the container.	|   | 
+|LABEL	|Adds metadata to an image. - owner, desc, version info	 |  |
+|WORKDIR	|Change working directory where the commands needs to be executed.|	WORKDIR /app|
+|EXPOSE	| Describe which ports your application is Listening on.|	EXPOSE 5001|
+|CMD	| Specify default commands.	| CMD ["python","app.py"]|
+|USER |	Set user and group ID.	|   | 
+|VOLUME	|Create Volume mounts.	 |  |
+|---------------------------|--------------------------|------------------------|
+
+# Docker Compose:
+
+•	Service that makes it easier to create and run multi-container applications.
+
+•	Docker Compose allows you to define your application’s containers as code inside a YAML file you can commit to your source repository.
+
+•	It automates the process of managing several Docker containers simultaneously, such as a website frontend, API, and database service.
+
+
+## Docker image optimization :
+Reducing the size of the docker image by choosing the small size base image will  make the file light weighted & efficient.  This can be achieved by Multi stage docker build.
+
+## Multi stage Docker Build:
+
+•	Allows you to build create smaller, more efficient docker images by breaking the build process into multiple stages.
+
+•	It avoids unnecessary files that need not be a part of application runtime.
+
+## Benefits:
+
+•	Reduced image Size
+
+•	Improved Security
+
+•	Simplified, Organized build process (easy to understanding dockerfile)
+
+# Docker Volumes:
+
+Docker is an ephemeral container. - meaning 
+
+   •	It is short lived.
+   •	Stateless
+   •	Automatically deleted after it stops.
+   •	No Persistence. - means no storage.
+   
+•	In order to store the data we need a mount a volume in the host machine & attached  it to Docker container to store - Application logs , user informations, etc
+•	These Volume will be present even when the container is Stopped.& it resides on the host machine.
+•	All volumes are kept in a specific directory on your host, typically /var/lib/docker/volumes for Linux systems, and are controlled by Docker.
+•	This helps During Container Failure as these volume hold logs and user actions to inspect & troubleshoot.
+
+## Interview Question -What's the  Need for Docker Volume ?
+
+A volume is a docker's way to store persistent data outside the container. So that data survives even container restarts or stops.
+
+# Docker Networks:
+  •	Host machine runs on a ethernet  that the user can access it using public ip address
+  •	Container also runs on a ethernet group of the host machine.
+  •	Host machine & container communication is possible because of the port mapping 5003:5001 
+  •	This way the user can access the host machine & containers(running applications).
+
+## Is Communication between containers is possible or not and how ?
+ 
+ The Docker network is a virtual network created by Docker to enable communication between Docker containers.
+ 
+ If two containers are running on the same host they can communicate with each other without the need for ports to be exposed to the host machine.
+
+Docker as default has a **bridge network**
+
+## What is docker network ?
+
+Its a virtual network created and managed by docker to enable communication between containers, host machine and any external.
+
+## Types of N/w:
+  1.	bridge    → default for standalone containers (single host)
+  2.	host        → shares hosts network
+  3.	overlay   →cross host networking in swarm (multiple host)
+  4.	none        → disables networking for containers
+  5.	macvlan  → assigns mac address for lan
+
+ # Docker security ?
+ Important for the docker images we create,
+
+   •	Provide least privilege for containers limit users & container permissions
+   •	isolation of networks : payment related application
+   •	Size of the images - minimum base image size
+   •	use official images from dockerhub
+   •	Scan the images before use
+   •	avoid unnecessary package downloads from dockerfile
+   •	Never run the containers with root user privileges.
+   •	Use Multi stage builds to minimize size.
+   •	Never save any username & passwords in the docker files.
+
+## what best practices or how to optimize docker images ?
+
+Use Multi stage builds to minimize size & efficiency.
+
