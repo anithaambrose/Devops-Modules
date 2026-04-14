@@ -160,4 +160,4 @@ docker stack ps <app-stack-name>
 
 ## To delete app stack & services 
 
-docker stack rm 
+ docker stack rm <app-stack-name>
