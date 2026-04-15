@@ -20,11 +20,13 @@ Automating the provisioning, deployment & the management of Scaling & Networking
 Also a **single container per service may not be sufficient enough to handle the growing traffic** to the application.
 
 for these scenarios,we need a tool that can, 
+ 
     ```
     1. bring up the **stopped containers** 
     2. to spin up new ones's to **handle growing traffic** 
     3. to ensure **Load balancing & high availability** of the application all the time.
     ```
+    
 ## Benefits of container Orchestration:
 
 ### 1.	Self healing - if container crashes , orchestrator will restart automatically.
