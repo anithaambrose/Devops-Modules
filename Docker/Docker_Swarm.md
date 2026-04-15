@@ -18,29 +18,32 @@ Automating the provisioning, deployment & the management of Scaling & Networking
 ####  Container are ephemeral by nature, they stop when process inside them finishes or ends because of an error.
 
 Also a **single container per service may not be sufficient enough to handle the growing traffic** to the application.
-for these scenarios.
 
-we need a tool that can bring up the **stopped containers** or to spin up new ones's to **handle growing traffic** & to ensure **Load balancing & high availability** of the application all the time.
-
+for these scenarios,we need a tool that can, 
+    ```
+    1. bring up the **stopped containers** 
+    2. to spin up new ones's to **handle growing traffic** 
+    3. to ensure **Load balancing & high availability** of the application all the time.
+    ```
 ## Benefits of container Orchestration:
 
-1.	 Automatic Scheduling:  Decides which applications needs to runs on which containers.	
+### 1.	Self healing - if container crashes , orchestrator will restart automatically.
 
-  	 **scheduled based on availability of nodes/containers**
-
-#### 3.	Scaling: Scales Container (up & down)  based on demand.
-
-4.	High Availability:  if container or node(ec2) fails/ crashed , New container takes over the process.
-
-#### 5.	Rolling Updates:  For newer updates from irctc 1.0 to irctc 1.1 image version → There wont be any downtime.
+### 2.	Rolling Updates:  For newer updates from irctc 1.0 to irctc 1.1 image version → There wont be any downtime.
    
    **Application will always be Up and running.**
 
-#### 6.	Self healing - if container crashes , orchestrator will restart automatically.
+### 3.	Scaling: Scales Container (up & down)  based on demand.
 
-#### 7.	Load Balancing: Distribution of traffic evenly across replicas of a application.
+### 4.	Load Balancing: Distribution of traffic evenly across replicas of a application.
 
-8.	Declarative configuration: helps to define the requirements. 
+5.	 Automatic Scheduling:  Decides which applications needs to runs on which containers.	
+   
+   **scheduled based on availability of nodes/containers**
+
+6.	High Availability:  if container or node(ec2) fails/ crashed , New container takes over the process.
+
+7.	Declarative configuration: helps to define the requirements. 
 
 # Blue/Green Deployments
 
@@ -70,18 +73,8 @@ Docker SWARM is an **Orchestration solution, to manage container** in a cluster.
 
 # DOCKER SWARM ARCHITECTURE :
 
-* Manager  - manages Cluster
-
-* Worker - runs task assigned by scheduler
-
-* Scheduler - Schedules container to node depending on rules & filters
-
-* Discovery Services - helps swarm manager discover new nodes & fetch the available nodes.
-
-* Store - store state of cluster, swarm services info.
   
 ![image](https://github.com/anithaambrose/Devops-Modules/blob/main/Docker/docker%20swarm.png)
-
 
 
 ## What can one do by using docker swarm?
@@ -118,7 +111,7 @@ Each application in docker will be called as a stack.
 
 ## States of Nodes:
 
-*  -   Current Node 
+(*)  -   Current Node 
 
 READY -   node is recognized by manager 
 
