@@ -15,34 +15,38 @@ Automating the provisioning, deployment & the management of Scaling & Networking
 
 ## Why is Container Orchestration is needed?
 
- Container are ephemeral by nature, they stop when process inside them finishes or ends because of an error.
+####  Container are ephemeral by nature, they stop when process inside them finishes or ends because of an error.
 
-Also a single container per service may not be sufficient enough to handle the growing traffic to the application.
+Also a **single container per service may not be sufficient enough to handle the growing traffic** to the application.
 for these scenarios.
 
-we need a tool that can bring up the stopped containers or to spin up new ones's to handle the growing traffic & to ensure Load balancing & high availability of the application all the time.
+we need a tool that can bring up the **stopped containers** or to spin up new ones's to **handle growing traffic** & to ensure **Load balancing & high availability** of the application all the time.
 
 ## Benefits of container Orchestration:
 
 1.	 Automatic Scheduling:  Decides which applications needs to runs on which containers.	
-        scheduled based on availability of nodes/containers
 
-2.	Scaling: Scales Container (up & down)  based on demand.
+  	 **scheduled based on availability of nodes/containers**
 
-3.	High Availability:  if container or node(ec2) fails/ crashed , New container takes over the process.
+#### 3.	Scaling: Scales Container (up & down)  based on demand.
 
-4.	Rolling Updates:  For newer updates from irctc 1.0 to irctc 1.1 image version → There wont be any downtime.
-        Application will always be Up and running.
+4.	High Availability:  if container or node(ec2) fails/ crashed , New container takes over the process.
 
-5.	Self healing - if container crashes , orchestrator will restart automatically.
+#### 5.	Rolling Updates:  For newer updates from irctc 1.0 to irctc 1.1 image version → There wont be any downtime.
+   
+   **Application will always be Up and running.**
 
-6.	Load Balancing: Distribution of traffic evenly across replicas of a application.
+#### 6.	Self healing - if container crashes , orchestrator will restart automatically.
 
-7.	Declarative configuration: helps to define the requirements. 
+#### 7.	Load Balancing: Distribution of traffic evenly across replicas of a application.
+
+8.	Declarative configuration: helps to define the requirements. 
 
 # Blue/Green Deployments
 
-its a technique that minimizes downtime and reduces risk by running two identical production environments: a "blue" environment (current live version) and a "green" environment (new version).
+its a technique that **minimizes downtime and reduces risk** by running **two identical production environments**
+
+a "blue" environment (**current live version**) and a "green" environment (**new version**).
 
 |   Blue Env|Green Env (backup)|
 |-----------|---------------|
@@ -55,55 +59,83 @@ its a technique that minimizes downtime and reduces risk by running two identica
  
 # Docker SWARM:
 
-•	is an Orchestration solution, to manage container in a cluster.
+Docker SWARM is an **Orchestration solution, to manage container** in a cluster.
 
-•	No special installation required as it is native to docker
+•	No special installation required as it is NATIVE TO DOCKER
 
-•	Used for Small scaled applications
+•	Used for SMALL SCALED APPLICATIONS
 
 •	best management system for orchestration - that creates a pool/ cluster of hosts to run containers.
 
-•	Cluster - set of connect machines that works together.
 
-•	When new machine joins the cluster it becomes the Node in the swarm.
+# DOCKER SWARM ARCHITECTURE :
+
+* Manager  - manages Cluster
+
+* Worker - runs task assigned by scheduler
+
+* Scheduler - Schedules container to node depending on rules & filters
+
+* Discovery Services - helps swarm manager discover new nodes & fetch the available nodes.
+
+* Store - store state of cluster, swarm services info.
+  
+![image](https://github.com/anithaambrose/Devops-Modules/blob/main/Docker/docker%20swarm.png)
+
+
 
 ## What can one do by using docker swarm?
 
-•	Deploy new containers to replace failed ones.
+•	DEPLOYS new containers to replace failed ones.
 
-•	Scale the number og container for load balancing
+•	SCALES the number og container for load balancing
 
-•	Rolling out applications updates among the containers in rolling updates.
+•	Rolling out applications updates among the containers in ROLLING UPDATES.
 
-•	Rollback of applications to older versions
+•	ROLLBACK of applications to OLDER VERSIONS
 
-•	bring down a node for maintenance without any application downtime.
+•	bring down a node for maintenance WITHOUT APPLICATION DOWNTIME.
 
-![image](https://github.com/anithaambrose/Devops-Modules/blob/main/Docker/docker%20swarm.png)
 
-## Terminologies:
+### Cluster - set of connect machines that works together.
 
-•	Service - series of tasks - is the image for 
+•	When new machine joins the cluster it becomes the NODE in the swarm.
 
-•	Task - commands inside a container.
 
-•	Leader - specific to manager node.
+## Terminologies in Cluster:
 
-## Docker stack 
+•	Service - series of tasks - CONTAINERS
 
-Each application in docker will be called as a stack 
+•	Task - COMMANDS inside a container.
+
+•	Leader - specific to manager node / Clusters Leader 
+
+
+## Docker STACK 
+
+Each application in docker will be called as a stack.
+
+
+## States of Nodes:
+
+*  -   Current Node 
+
+READY -   node is recognized by manager 
+
+ACTIVE -  node is used as worker node 
+
+## Use-cases od docker orchestor:
+
+* Helps **Triggers auto restart**
+
+& Helps  **improve availability** in orchestration(docker swarm).
+
+* Helps in **load balancing** (only routes the healthy containers)
+
 
 ## What is a Docker health check ?
 
 Its a way to tell docker how to test if the container is  working as expected.
-
-## Use-cases:
-
-Helps Triggers auto restart
-
-Helps  improve availability in orchestration(docker swarm).
-
-Helps in load balancing (only routes the healthy containers)
 
 ## Why do we need it ?
 
