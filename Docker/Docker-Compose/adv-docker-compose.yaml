@@ -1,0 +1,49 @@
+version: "2"
+services:
+  redis:
+    image: redis
+    networks:
+      - backend
+  vote:
+    image: dockersamples/examplevotingapp_vote
+    ports:
+      - "5000:80"
+    depends_on:
+      - redis
+    volumes:
+      - ./vote:/var/lib/vote
+    networks:
+      - frontend
+      - backend
+    healthcheck:
+      test: ["CMD","curl","-f","http://localhost"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  db:
+    image: postgres:15-alpine
+    networks:
+      - backend
+  results_app:
+    image: dockersamples/examplevotingapp_result
+    ports:
+      - "8000:80"
+    depends_on:
+      - db
+    networks:
+      - frontend
+      - backend
+  worker:
+    image: dockersamples/examplevotingapp_worker
+    depends_on:
+      - redis
+      - db
+    networks:
+      - backend
+  
+networks:
+  frontend:
+  backend:
+
